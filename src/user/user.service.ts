@@ -34,4 +34,8 @@ export class UserService {
   async findById(id: string) {
     return await this.userModel.findById(id).exec();
   }
+
+  async index(filter) {
+    return await this.userModel.find(filter);
+  }
 }
